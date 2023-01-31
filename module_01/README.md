@@ -1,38 +1,22 @@
-**Project infrastructure and tech stack**  
-* Google Cloud Platform (GCP): Cloud-based auto-scaling platform by Google
-* Google Cloud Storage (GCS): Data Lake
-* BigQuery: Data Warehouse
-* Terraform: Infrastructure-as-Code (IaC)
-* Docker: Containerization
-* SQL: Data Analysis & Exploration
-* Prefect: Workflow Orchestration
-* dbt: Data Transformation
-* Spark: Distributed Processing
-* Kafka: Streaming
+# Data Pipeline with Docker and GCP 
 
+<img width="424" alt="Screen Shot 2023-01-31 at 21 04 11" src="https://user-images.githubusercontent.com/40763359/215870275-6658038f-d2ac-48af-9a97-5b565ec128bc.png">
 
-# Module1: Data Pipeline with Docker and GCP 
-* **Docker** 
-  - Running Postgres locally with Docker
-* **GCP**
-  - Setting up infrastructure on GCP with Terraform
+* **Step1. running postgres in Docker** 
+  - postgres image file 
+  - using `pgcli` for connecting to the database
+  - test with jupyter notebook 
+* **Step2. connecting postgres and pgAdmin**
+  - pdAdmin image file 
+  - set up docker network 
+* **Step3. Putting the ingestion script into Docker**
+  - write data ingestion python script with argparse
+  - Dockerizing the ingestion script
+* **Step4. Running Postgres and pgAdmin with Docker-Compose**
+  - Docker-compose YAML file
+  - Running multiple containers with docker-compose up
+  
+  
   
 
-# Module 2: Workflow Orchestration
-Data Lake
-Workflow orchestration
-Introduction to Prefect
-ETL with GCP & Prefect
-Parametrizing workflows
-Prefect Cloud and additional resources
-Homework
-More details
-
-# Module 3: Data Warehouse
-Data Warehouse
-BigQuery
-Partitioning and clustering
-BigQuery best practices
-Internals of BigQuery
-Integrating BigQuery with Airflow
-BigQuery Machine Learning
+  
