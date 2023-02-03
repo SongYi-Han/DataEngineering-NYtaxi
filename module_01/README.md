@@ -85,7 +85,7 @@ Create two containers(postgres and pgAdmin) and load the data with python script
 * Shutting down and removing the instance
  
 
-## Terraform 
+## Creating GCP Infrastructure with Terraform
 ###  Execution
 ```
 # Refresh service-account's auth-token for this session
