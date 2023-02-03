@@ -2,8 +2,10 @@
 
 <img width="424" alt="Screen Shot 2023-01-31 at 21 04 11" src="https://user-images.githubusercontent.com/40763359/215870275-6658038f-d2ac-48af-9a97-5b565ec128bc.png">
 
-* **Step1. running postgres in Docker** 
-  - postgres image file 
+## Create two containers and load the data with python script
+
+* **Running postgres container** 
+  - running postgres image in command line 
 ```
    docker run -it \
   -e POSTGRES_USER="root" \
@@ -13,8 +15,8 @@
   -p 5432:5432 \
   postgres:13
 ```
-  - connect to postgres
-    - method1) using `pgcli` in command line
+  - How to connect to postgres
+    - method1) using `pgcli`in command line
     
     ```
     pip install pgcli
@@ -22,10 +24,11 @@
     ```
     pgcli -h localhost -p 5432 -u root -d ny_taxi
     ```
-    - mehotd2) sqlalchemy in python script or jupyter notebook
+    - mehotd2) using sqlalchemy in python script or jupyter notebook
+      - checkout the `data_ingestion.py`
     
     
-* **Step2. connecting postgres and pgAdmin**
+* **Running pgAdmin container and connect to postgres with docker network**
   - set up docker network 
   ```
   docker network create pg-network
@@ -55,12 +58,13 @@
 - connect to pgAdmin web interface and create server 
   - host name : pg-database
   
-* **Step3. Putting the ingestion script into Docker**
+* **running the ingestion script**
   - write data ingestion python script with argparse
   - Dockerizing the ingestion script
-* **Step4. Running Postgres and pgAdmin with Docker-Compose**
-  - Docker-compose YAML file
-  - Running multiple containers with docker-compose up
+  
+* **Anotehr way: Running Postgres and pgAdmin with Docker-Compose**
+  - write Docker-compose YAML file
+  - Running multiple containers with `docker-compose up`
   
   
  
