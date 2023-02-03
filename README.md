@@ -13,7 +13,7 @@
 
 # Module1: Data Pipeline with Docker and GCP 
 * **Docker** 
-  - Running Postgres locally with Docker
+  - containerize data ingestion porocess with Docker
 * **GCP**
   - Setting up infrastructure on GCP with Terraform
   
