@@ -71,19 +71,65 @@ Create two containers(postgres and pgAdmin) and load the data with python script
  
  ## Setting up the environment on GCP VM
 * Generating SSH keys
-* Creating a virtual machine on GCP
+  * create ssh key : https://cloud.google.com/compute/docs/connect/create-ssh-keys  
+      `ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048`
+  * upload public key to GCP 
+  
+* Creating a VM instance
+
 * Connecting to the VM with SSH
-* Installing Anaconda
-* Installing Docker
+  * Copy external IP of VM and connect with `ssh -i !/ .ssh/gcp usernamge@VM_External_IP`
+  * Installing Anaconda : `wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh` 
+  * Installing Docker : `sudo apt-get install docker.io`
+  
 * Creating SSH config file
+  * config 
+  ```
+  Host name
+    HostName external_IP
+    User username_used_for_key
+    IdentityFile ~/.ssh
+  ```
 * Accessing the remote machine with VS Code and SSH remote
-* Installing docker-compose
-* Installing pgcli
+
+* Installing docker-compose  
+
+  `nano .bashrc`  
+  
+  ```
+  export PATH ="{HOME}/bin:${PATH}"
+  ```
+  
+  `source .bashrc`  
+  
+  `docker-compose up`  
+  
+  `docker ps` 
+  
+* Installing pgcli  
+
+  `conda install -c conda-forge pgcli`
+
 * Port-forwarding with VS code: connecting to pgAdmin and Jupyter from the local computer
-* Installing Terraform
-* Using sftp for putting the credentials to the remote machine
+
+* load data by running code in Jupyter notebook
+
+* Installing Terraform  
+`$ wget terraform`
+`$ sudo `
+`$ unzip`
+
+* Using sftp for putting the credentials to the remote machine  
+`$ sftp hostname`  
+`$ export GOOGLE_APPLICATION_CREDENTIALS=~/ .gc/ny-rides.json`  
+`$ gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS`  
+`$ terraform init`
+`$ terraform plan`
+`$ terraform apply`
+
+
 * Shutting down and removing the instance
- 
+ `$ sudo shutdown now`
 
 ## Creating GCP Infrastructure with Terraform
 ###  Execution
