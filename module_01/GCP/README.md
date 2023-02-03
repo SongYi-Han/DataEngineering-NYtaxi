@@ -1,38 +1,33 @@
-**Project infrastructure and tech stack**  
-* Google Cloud Platform (GCP): Cloud-based auto-scaling platform by Google
-* Google Cloud Storage (GCS): Data Lake
-* BigQuery: Data Warehouse
-* Terraform: Infrastructure-as-Code (IaC)
-* Docker: Containerization
-* SQL: Data Analysis & Exploration
-* Prefect: Workflow Orchestration
-* dbt: Data Transformation
-* Spark: Distributed Processing
-* Kafka: Streaming
+### Initial GCP Setup
 
-
-# Module1: Data Pipeline with Docker and GCP 
-* **Docker** 
-  - Running Postgres locally with Docker
-* **GCP**
-  - Setting up infrastructure on GCP with Terraform
-  
-
-# Module 2: Workflow Orchestration
-Data Lake
-Workflow orchestration
-Introduction to Prefect
-ETL with GCP & Prefect
-Parametrizing workflows
-Prefect Cloud and additional resources
-Homework
-More details
-
-# Module 3: Data Warehouse
-Data Warehouse
-BigQuery
-Partitioning and clustering
-BigQuery best practices
-Internals of BigQuery
-Integrating BigQuery with Airflow
-BigQuery Machine Learning
+1. Create an account with your Google email ID 
+2. Setup your first [project](https://console.cloud.google.com/) if you haven't already
+    * eg. "DTC DE Course", and note down the "Project ID" (we'll use this later when deploying infra with TF)
+3. Setup [service account & authentication](https://cloud.google.com/docs/authentication/getting-started) for this project
+    * Grant `Viewer` role to begin with.
+    * Download service-account-keys (.json) for auth.
+4. Download [SDK](https://cloud.google.com/sdk/docs/quickstart) for local setup
+5. Set environment variable to point to your downloaded GCP keys:
+   ```shell
+   export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
+   
+   # Refresh token/session, and verify authentication
+   gcloud auth application-default login
+   ```
+   
+### Setup for Access
+ 
+1. [IAM Roles](https://cloud.google.com/storage/docs/access-control/iam-roles) for Service account:
+   * Go to the *IAM* section of *IAM & Admin* https://console.cloud.google.com/iam-admin/iam
+   * Click the *Edit principal* icon for your service account.
+   * Add these roles in addition to *Viewer* : **Storage Admin** + **Storage Object Admin** + **BigQuery Admin**
+   
+2. Enable these APIs for your project:
+   * https://console.cloud.google.com/apis/library/iam.googleapis.com
+   * https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com
+   
+3. Please ensure `GOOGLE_APPLICATION_CREDENTIALS` env-var is set.
+   ```shell
+   export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
+   ```
+ 
