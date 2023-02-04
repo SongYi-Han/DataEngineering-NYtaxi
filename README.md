@@ -15,9 +15,9 @@
 
 
 # Module1: Data Pipeline with Docker and Terraform in GCP 
-* **Docker** 
+* **Data load**
   - Containerizing data ingestion porocess with Docker
-* **GCP**
+* **Infrastructure as code**
   - Setting up infrastructure on GCP with Terraform
   
 
