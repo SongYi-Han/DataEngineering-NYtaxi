@@ -1,4 +1,3 @@
-## Transcript for Video 2
 
 In this session, we are going to take a look at a basic python script that pulls the yellow taxi data into a postgres db and then transforms that script to be orchestrated with Prefect. 
 
