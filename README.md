@@ -35,5 +35,7 @@
   
   # Module 4: Analytics (data transformation and visualization)
   * Data modeling with dbt + BigQuery in cloud
+    * install dbt
+    * setup profiles.yml and run `dbt init`
   * running a dbt project in production
   * visualize with data studio 
