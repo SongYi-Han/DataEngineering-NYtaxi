@@ -18,21 +18,16 @@
   - Setting up infrastructure on GCP with Terraform
   
 
-# Module 2: Workflow Orchestration
-Data Lake
-Workflow orchestration
-Introduction to Prefect
-ETL with GCP & Prefect
-Parametrizing workflows
-Prefect Cloud and additional resources
-Homework
-More details
+# Module 2: Workflow Orchestration with Prefect
+  * Data Lake
+  * Workflow orchestration
+  * ETL with GCP & Prefect
+  * Parametrizing workflows
+  * Prefect Cloud and additional resources
 
-# Module 3: Data Warehouse
-Data Warehouse
-BigQuery
-Partitioning and clustering
-BigQuery best practices
-Internals of BigQuery
-Integrating BigQuery with Airflow
-BigQuery Machine Learning
+# Module 3: Data Warehousing with Bigquery
+  * Partitioning and clustering
+  * BigQuery best practices
+  * Internals of BigQuery
+  * Integrating BigQuery with Airflow
+  * BigQuery Machine Learning
