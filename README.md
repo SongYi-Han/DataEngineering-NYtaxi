@@ -33,6 +33,7 @@
   * BigQuery Machine Learning
   * Deployment
   
-  # Module 4: Analytics 
-  * dbt for data transform
+  # Module 4: Analytics (data transformation and visualization)
+  * Data modeling with dbt + BigQuery in cloud
+  * running a dbt project in production
   * visualize with data studio 
