@@ -31,3 +31,4 @@
   * Internals of BigQuery
   * Integrating BigQuery with Airflow
   * BigQuery Machine Learning
+  * Deployment
