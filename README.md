@@ -14,7 +14,7 @@
 * Kafka: Streaming
 
 
-# Module1: Data Pipeline with Docker and Terraform in GCP 
+## Module1: Data Pipeline with Docker and Terraform in GCP 
 * **Data load**
   - Containerizing data ingestion porocess with Docker
   - Simply load the data with docker-compose
@@ -22,7 +22,7 @@
   - Setting up infrastructure on GCP with Terraform
   
 
-# Module 2: Workflow Orchestration with Prefect
+## Module 2: Workflow Orchestration with Prefect
   * Prefect flow, task(ETL), blocks and collection
     * link
   * ETL with GCP & Prefect
@@ -35,7 +35,7 @@
   * Prefect Cloud and additional resources
     * Running flows on GCP
 
-# Module 3: Data Warehousing with Bigquery
+## Module 3: Data Warehousing with Bigquery
   * Partitioning and clustering
   * BigQuery best practices
   * Internals of BigQuery
@@ -43,7 +43,7 @@
   * BigQuery Machine Learning
   * Deployment
   
-  # Module 4: Analytics (data transformation and visualization)
+## Module 4: Analytics (data transformation and visualization)
   * Data modeling with dbt + BigQuery in cloud
     * method 1) set up in web browser
       * link 
