@@ -1,4 +1,7 @@
-**Project infrastructure and tech stack**  
+# NY taxi dataset pipelining 👩🏻‍🔧
+* dataset : 
+
+## Infrastructure and tech stack used in this project ✨
 * Google Cloud Platform (GCP): Cloud-based auto-scaling platform by Google
 * Google Cloud Storage (GCS): Data Lake
 * BigQuery: Data Warehouse
@@ -11,9 +14,9 @@
 * Kafka: Streaming
 
 
-# Module1: Data Pipeline with Docker and GCP 
+# Module1: Data Pipeline with Docker and Terraform in GCP 
 * **Docker** 
-  - containerize data ingestion porocess with Docker
+  - Containerizing data ingestion porocess with Docker
 * **GCP**
   - Setting up infrastructure on GCP with Terraform
   
