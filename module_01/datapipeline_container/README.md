@@ -1,38 +1,56 @@
-**Project infrastructure and tech stack**  
-* Google Cloud Platform (GCP): Cloud-based auto-scaling platform by Google
-* Google Cloud Storage (GCS): Data Lake
-* BigQuery: Data Warehouse
-* Terraform: Infrastructure-as-Code (IaC)
-* Docker: Containerization
-* SQL: Data Analysis & Exploration
-* Prefect: Workflow Orchestration
-* dbt: Data Transformation
-* Spark: Distributed Processing
-* Kafka: Streaming
 
+* **Running postgres container** 
+  ```
+   docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  postgres:13
+  ```
 
-# Module1: Data Pipeline with Docker and GCP 
-* **Docker** 
-  - Running Postgres locally with Docker
-* **GCP**
-  - Setting up infrastructure on GCP with Terraform
+    * How to connect to postgres
+      * method1) using `pgcli`in command line
+    
+      ```
+      pip install pgcli
+      ```
+      ```
+      pgcli -h localhost -p 5432 -u root -d ny_taxi
+      ```
+      
+      * mehotd2) using sqlalchemy in python script or jupyter notebook
+          * checkout the `data_ingestion.py`
+    
+    
+* **Running pgAdmin container and connect to postgres with docker network**
+  - set up docker network 
+  ```
+  docker network create pg-network
+  ```
+  - Run Postgres 
+  ```
+  docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v c:/Users/alexe/git/data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql/ny_taxi_postgres_data:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  --network=pg-network \
+  --name pg-database \
+  postgres:13
+  ```
+  - Run pgAdmin
+  ```
+  docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -p 8080:80 \
+  --network=pg-network \
+  --name pgadmin-2 \
+  dpage/pgadmin4
+  ```
+- connect to pgAdmin web interface and create server 
+  - host name : pg-database
   
-
-# Module 2: Workflow Orchestration
-Data Lake
-Workflow orchestration
-Introduction to Prefect
-ETL with GCP & Prefect
-Parametrizing workflows
-Prefect Cloud and additional resources
-Homework
-More details
-
-# Module 3: Data Warehouse
-Data Warehouse
-BigQuery
-Partitioning and clustering
-BigQuery best practices
-Internals of BigQuery
-Integrating BigQuery with Airflow
-BigQuery Machine Learning
