@@ -19,11 +19,17 @@
   
 
 # Module 2: Workflow Orchestration with Prefect
-  * Data Lake
-  * Workflow orchestration
+  * Prefect flow, task(ETL), blocks and collection
+    * link
   * ETL with GCP & Prefect
+    * Putting data to Google Cloud Storage
+    *  From GCS to BigQuery
   * Parametrizing workflows
+  * Schedules & Docker Storage with Infrastructure
+    * Flow code storage
+    * Running tasks in Docker
   * Prefect Cloud and additional resources
+    * Running flows on GCP
 
 # Module 3: Data Warehousing with Bigquery
   * Partitioning and clustering
