@@ -47,10 +47,16 @@ Alternatively, create these blocks using code by following the templates in the 
 ### 7. Write a flow script
 
 Write python code in flow folder to ingest data and add `@flow` and `@task` decorators. 
+* Extract data from web and cleaning
+* Save as parquet in GCS
+* From GCS (data lake) to Bigquery (data wharehouse)
+* parameterize 
+
 
 ### 8. Create deployments
 
-Create and apply your deployments.
+* Build & apply
+* Deployments on Prefect Orion UI
 
 ### 9. Run a deployment or create a schedule
 
