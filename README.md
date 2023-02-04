@@ -32,3 +32,7 @@
   * Integrating BigQuery with Airflow
   * BigQuery Machine Learning
   * Deployment
+  
+  # Module 4: Analytics 
+  * dbt for data transform
+  * visualize with data studio 
