@@ -52,3 +52,8 @@
       * setup profiles.yml and run `dbt init`
   * running a dbt project in production
   * visualize with data studio 
+  
+## Module 5: Batch processing
+  * Connect Spark job to GCS
+  * Using Spark submit
+  * Ruuning Spark with Dataproc
