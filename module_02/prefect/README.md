@@ -1,11 +1,4 @@
-# Data Engineering Zoomcamp 2023 Week 2 
-## Prefect
 
-This repo contains Python code to accompany the videos that show how to use Prefect for Data Engineering. We will create ETL workflows to extract, transform, and load your data.
-
-We will use Postgres and GCP's Google Cloud Storage and BigQuery. 
-
-Prefect helps you observe and orchestrate your dataflows.
 
 # Setup
 
