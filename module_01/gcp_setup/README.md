@@ -28,20 +28,23 @@
   
 * Creating a VM instance
 
-* Connecting to the VM with SSH
-  * Copy external IP of VM and connect with `ssh -i !/ .ssh/gcp usernamge@VM_External_IP`
-  * Installing Anaconda : `wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh` 
-  * Installing Docker : `sudo apt-get install docker.io`
-  
 * Creating SSH config file
   * config 
   ```
-  Host name
-    HostName external_IP
-    User username_used_for_key
-    IdentityFile ~/.ssh
+  Host de-gcp
+    HostName 34.65.57.140
+    User songyi
+    IdentityFile ~/.ssh/gcp
   ```
-* Accessing the remote machine with VS Code and SSH remote
+
+* Connecting to the VM with SSH
+  * Copy external IP of VM and connect with `ssh -i ~/.ssh/gcp usernamge@VM_External_IP`
+  * Installing Anaconda : ` wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh` `source .bashrc`
+  `bash Anaconda3-2018.12-Linux-x86_64.sh`
+  * Installing Docker : `sudo apt-get update` `sudo apt-get install docker.io`
+  
+
+* Setup VS code to Access the remote machine with VS Code and SSH remote
 
 * Installing docker-compose  
 
