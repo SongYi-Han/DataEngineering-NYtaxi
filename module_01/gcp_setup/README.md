@@ -24,7 +24,7 @@
 * Generating SSH keys
   * create ssh key : https://cloud.google.com/compute/docs/connect/create-ssh-keys  
       `ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048`
-  * upload public key to GCP 
+  * upload public key to computer engine - metadata
   
 * Creating a VM instance
 
