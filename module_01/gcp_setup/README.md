@@ -68,19 +68,35 @@
 
 * Port-forwarding with VS code: connecting to pgAdmin and Jupyter from the local computer
 
-* load data by running code in Jupyter notebook
+* load data by running code in Jupyter notebook or python
+```
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+
+python ingest_data.py \
+  --user=root \
+  --password=root \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table_name=yellow_taxi_trips \
+  --url=${URL}
+```
 
 * Installing Terraform  
-`$ wget terraform`
-`$ sudo `
-`$ unzip`
+`$ wget https://releases.hashicorp.com/terraform/1.3.7/terraform_1.3.7_linux_amd64.zip`
+`$ sudo apt-get install unzip `
+`$ unzip terraform_1.3.7_linux_amd64.zip`
 
 * Using sftp for putting the credentials to the remote machine  
-`$ sftp hostname`  
-`$ export GOOGLE_APPLICATION_CREDENTIALS=~/ .gc/ny-rides.json`  
+# local
+`$ sftp hostname(de-gcp)`  
+`$ mkdir .cp`
+`$ put zoomcamp-de-377019-d4f0c120b492.json`
+# remote
+`$ export GOOGLE_APPLICATION_CREDENTIALS=~/.gc/zoomcamp-de-377019-d4f0c120b492.json.json`   
 `$ gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS`  
-`$ terraform init`
-`$ terraform plan`
+`$  `
+`$ terraform plan` projectname => variables.tf up bu defalut 
 `$ terraform apply`
 
 
