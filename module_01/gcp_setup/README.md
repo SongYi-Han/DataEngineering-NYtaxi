@@ -47,22 +47,24 @@
 * Setup VS code to Access the remote machine with VS Code and SSH remote
 
 * Installing docker-compose  
-
-  `nano .bashrc`  
-  
+`https://github.com/docker/compose/releases/download/v2.15.1/docker-compose-linux-x86_64 -O docker-compose`
+`chmod +x docker-compose`
+`nano .bashrc`    
   ```
   export PATH ="{HOME}/bin:${PATH}"
   ```
   
   `source .bashrc`  
   
-  `docker-compose up`  
+  `docker-compose up -d`  
   
   `docker ps` 
   
 * Installing pgcli  
 
   `conda install -c conda-forge pgcli`
+  `pip install `
+  `pgcli -h localhost -U root -d ny_taxi`
 
 * Port-forwarding with VS code: connecting to pgAdmin and Jupyter from the local computer
 
