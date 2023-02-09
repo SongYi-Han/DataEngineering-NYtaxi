@@ -6,7 +6,9 @@
 * infrastructure : Postgres, Google Cloud Storage, BigQuery + Airflow or Prefect
 
 ## Airflow Concepts
-nice airflow introduction video : https://www.youtube.com/watch?v=K9AnJ9_ZAXE&t=1108s
+nice airflow introduction video : 
+* airflow tutorial : https://www.youtube.com/watch?v=K9AnJ9_ZAXE&t=1108s
+* airflow with bigquery: https://www.youtube.com/watch?v=wAyu5BN3VpY
 ### Airflow architecture
 
 ![](Airflow/docs/arch-diag-airflow.png)
