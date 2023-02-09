@@ -1,7 +1,7 @@
 # Implement Data ingestion pipeline with Docker and GCP 
 
 
-## 📁 datapipeline : Containerize Data Pipelinewith Docker
+## 📁 datapipeline-docker : Containerize Data Pipelinewith Docker
 ㄴ data_ingestion.py  
 ㄴ docker-compoese.yaml  
 
@@ -19,7 +19,7 @@ Create two containers(postgres and pgAdmin) and another container to run python 
   - Running multiple containers with `$ docker-compose up`
 
 
-## 📁 gcp : Creating GCP Infrastructure with Terraform  
+## 📁 gcp-terraform : Creating GCP Infrastructure with Terraform  
 ㄴmain.tf  
 ㄴvariable.tf  
 
