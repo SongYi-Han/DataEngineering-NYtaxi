@@ -20,7 +20,7 @@
 3. Python version: 3.7+
 
 
-### Airflow Setup
+### Setup Airflow with docker
 
 1. Create a new sub-directory called `airflow` in your `project` dir (such as the one we're currently in)
 
@@ -79,7 +79,7 @@
 
 
 
- ### Execution
+ ### Execution Airflow with docker
  
   1. Build the image (only first-time, or when there's any change in the `Dockerfile`, takes ~15 mins for the first-time):
      ```shell
