@@ -33,7 +33,7 @@
 
     ```bash
     mkdir -p ./dags ./logs ./plugins
-    echo -e "AIRFLOW_UID=$(id -u)" > .env
+    echo -e "AIRFLOW_UID=$(id -u)" > .env # skip on Mac
     ```
 
     On Windows you will probably also need it. If you use MINGW/GitBash, execute the same command. 
@@ -54,7 +54,7 @@
    But this is only a quick-start template, and as you proceed you'll figure out which unused services can be removed.
    Eg. [Here's](docker-compose-nofrills.yml) a no-frills version of that template.
 
-5. **Docker Build**:
+5. **Docker Build (Optional)**:
 
     When you want to run Airflow locally, you might want to use an extended image, 
     containing some additional dependencies - for example you might add new python packages, 
