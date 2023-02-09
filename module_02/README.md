@@ -6,7 +6,7 @@
 * infrastructure : Postgres, Google Cloud Storage, BigQuery + Airflow or Prefect
 
 ## Airflow Concepts
-
+nice airflow introduction video : https://www.youtube.com/watch?v=K9AnJ9_ZAXE&t=1108s
 ### Airflow architecture
 
 ![](Airflow/docs/arch-diag-airflow.png)
@@ -33,7 +33,7 @@ Backend to the Airflow environment. Used by the scheduler, executor and webserve
 All these services allow you to run Airflow with CeleryExecutor. 
 For more information, see [Architecture Overview](https://airflow.apache.org/docs/apache-airflow/stable/concepts/overview.html).
 
-### Workflow in Airflow
+### Core components in Airflow
 
  ![](Airflow/docs/gcs_ingestion_dag.png)
 
