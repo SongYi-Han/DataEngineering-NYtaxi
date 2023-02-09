@@ -1,7 +1,7 @@
-# Implement Data ingestion pipeline with Docker and GCP 
+# Implement Data ingestion pipeline with Docker and terraform on GCP ☁️
 
 
-## 📁 datapipeline-docker : Containerize Data Pipelinewith Docker
+## 📁 datapipeline-docker : Containerize Data Pipeline with Docker
 ㄴ data_ingestion.py  
 ㄴ docker-compoese.yaml  
 
