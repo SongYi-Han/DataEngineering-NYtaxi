@@ -2,34 +2,7 @@
 
 * `./dags` - `DAG_FOLDER` for DAG files (use `./dags_local` for the local ingestion DAG)
 * `./logs` - contains logs from task execution and scheduler.
-* `./plugins` - for custom plugins
-
-## Airflow Concepts
-### Airflow architecture
-
-![](arch-diag-airflow.png)
-
-* **Web server**:
-GUI to inspect, trigger and debug the behaviour of DAGs and tasks. 
-Available at http://localhost:8080.
-
-* **Scheduler**:
-Responsible for scheduling jobs. Handles both triggering & scheduled workflows, submits Tasks to the executor to run, monitors all tasks and DAGs, and
-then triggers the task instances once their dependencies are complete.
-
-* **Worker**:
-This component executes the tasks given by the scheduler.
-
-* **Metadata database (postgres)**:
-Backend to the Airflow environment. Used by the scheduler, executor and webserver to store state.
-
-* **Other components** (seen in docker-compose services):
-    * `redis`: Message broker that forwards messages from scheduler to worker.
-    * `flower`: The flower app for monitoring the environment. It is available at http://localhost:5555.
-    * `airflow-init`: initialization service (customized as per this design)
-
-All these services allow you to run Airflow with CeleryExecutor. 
-For more information, see [Architecture Overview](https://airflow.apache.org/docs/apache-airflow/stable/concepts/overview.html).
+* `./plugins` - custom plugins and helper funtion
 
 
 ## Workflow
@@ -50,10 +23,7 @@ For more information, see [Architecture Overview](https://airflow.apache.org/doc
     * Ideally, a task should flow from `none`, to `scheduled`, to `queued`, to `running`, and finally to `success`.
 
 
-
- ## Setup
-
- ### Airflow setup with docker
+ ## Airflow setup with docker
  ### Pre-Reqs
 
 1. For the sake of standardization across this workshop's config,
@@ -98,8 +68,7 @@ For more information, see [Architecture Overview](https://airflow.apache.org/doc
    ```shell
    curl -LfO 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml'
    ```
-   
-4. It could be overwhelming to see a lot of services in here. 
+   It could be overwhelming to see a lot of services in here. 
    But this is only a quick-start template, and as you proceed you'll figure out which unused services can be removed.
    Eg. [Here's](docker-compose-nofrills.yml) a no-frills version of that template.
 
