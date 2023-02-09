@@ -5,6 +5,7 @@
 * `./plugins` - custom plugins and helper funtion
 
  ## Airflow setup with docker
+ official documents : https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html
  ### Pre-Reqs
 
 1. For the sake of standardization across this workshop's config,
