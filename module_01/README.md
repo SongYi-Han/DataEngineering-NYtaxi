@@ -1,4 +1,4 @@
-# Implement Data ingestion pipeline with Docker and terraform on GCP ☁️
+# Implement Data ingestion pipeline with Docker and Terraform on GCP
 
 
 ## 📁 datapipeline-docker : Containerize Data Pipeline with Docker
@@ -8,21 +8,19 @@
 
 <img width="424" alt="Screen Shot 2023-01-31 at 21 04 11" src="https://user-images.githubusercontent.com/40763359/215870275-6658038f-d2ac-48af-9a97-5b565ec128bc.png">
 
-Create two containers(postgres and pgAdmin) and another container to run python script
+Best practice for isolation : Create two containers for database server(postgres and pgAdmin) and another container to run python script
 
-* **Running the ingestion script**
+* **container1 : Running the ingestion script**
   - write data ingestion python script with argparse
-  - Dockerizing the ingestion script
+  - wite docker file and run with `docker run`
   
-* **Running Postgres and pgAdmin with Docker-Compose**
-  - write Docker-compose YAML file
-  - Running multiple containers with `$ docker-compose up`
+* **container2,3 : Running Postgres and pgAdmin**
+  - write Docker-compose YAML file and run multiple containers with `$ docker-compose up`
 
 
 ## 📁 gcp-terraform : Creating GCP Infrastructure with Terraform  
 ㄴmain.tf  
 ㄴvariable.tf  
-
 
 **Execution**
 ```
