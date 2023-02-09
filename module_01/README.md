@@ -1,13 +1,13 @@
-# Implement Data Pipeline with Docker and GCP 
+# Implement Data ingestion pipeline with Docker and GCP 
 
 
 ## Containerize Data Pipelinewith Docker
 
 <img width="424" alt="Screen Shot 2023-01-31 at 21 04 11" src="https://user-images.githubusercontent.com/40763359/215870275-6658038f-d2ac-48af-9a97-5b565ec128bc.png">
 
-Create two containers(postgres and pgAdmin) and load the data with python script
+Create two containers(postgres and pgAdmin) and another container to run python script
 
-* **running the ingestion script**
+* **Running the ingestion script**
   - write data ingestion python script with argparse
   - Dockerizing the ingestion script
   
