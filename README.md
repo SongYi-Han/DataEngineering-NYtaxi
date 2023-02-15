@@ -1,3 +1,4 @@
+This is my own note and project repository as a part of Data engineering zoomcamp offered by DataTalkClub https://github.com/DataTalksClub/data-engineering-zoomcamp
 # NY taxi dataset pipelining 👩🏻‍🔧
 * Dataset : https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
